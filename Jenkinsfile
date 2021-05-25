@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps { 
-                gradle build 
+                bat '.\gradlew build'
             }
             post {
                 always {
@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Test'){
             steps {
-                echo integration tests
+                echo "integration tests"
             }
             post {
                 always {
