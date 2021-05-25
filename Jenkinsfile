@@ -28,7 +28,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                gradle run
+                bat 'gradlew.bat run'
             }
         }
     }
