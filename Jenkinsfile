@@ -7,7 +7,8 @@ pipeline {
     stages {
         stage('Build') { 
             steps { 
-                bat '.\gradlew build'
+                bat dir
+                //bat '.\gradlew build'
             }
             post {
                 always {
